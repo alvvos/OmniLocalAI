@@ -3,7 +3,7 @@ from openai import OpenAI
 from duckduckgo_search import DDGS
 import base64
 
-st.set_page_config(page_title="Asistente Corporativo Multimodal", layout="wide")
+st.set_page_config(page_title="Asistente corporativo", layout="wide")
 
 estilo_oculto = """
 <style>
@@ -18,9 +18,9 @@ st.markdown(estilo_oculto, unsafe_allow_html=True)
 cliente = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 
 if "chats" not in st.session_state:
-    st.session_state.chats = {"Conversacion 1": []}
+    st.session_state.chats = {"Conversación 1": []}
 if "chat_actual" not in st.session_state:
-    st.session_state.chat_actual = "Conversacion 1"
+    st.session_state.chat_actual = "Conversación 1"
 
 with st.sidebar:
     st.title("Configuración")
